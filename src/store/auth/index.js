@@ -5,6 +5,7 @@ import {get, post} from '../../utils/apiCaller.util';
 import {VERSION} from '../../config';
 import {setItem, getItem, removeItem} from '../../utils/localStorageUtils';
 import {decodeToken} from '../../utils/auth.util';
+import router from '../../routers';
 
 const {getFieldForm, updateFieldForm} = createHelpers({
   getterType: 'getFieldForm',
@@ -153,7 +154,7 @@ const actions = {
 
       await setItem('token', token);
       await commit(types.M_AUTH_SUCCESS, {token: token});
-      window.location.reload();
+      router.replace('/admin/welcome');
     } catch (error) {
       const err = error.response;
       if (err && err.data) {

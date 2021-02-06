@@ -28,7 +28,11 @@
       >
     </li>
     <li>
-      <a href="/" target="_blank" class="blue-bg-white-txt bttn-jelly bttn-sm bttn-block">
+      <a
+        href="/mini-vexere"
+        target="_blank"
+        class="blue-bg-white-txt bttn-jelly bttn-sm bttn-block"
+      >
         <i class="fas fa-home"></i>
         Open Home Page</a
       >

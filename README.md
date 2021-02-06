@@ -1,4 +1,8 @@
-# vue-routing
+# ![alt text](./dist/img/logo.60f06d83.svg) - Mini project
+
+## Introdution
+### This is a mini website that I built to have fun with Vuejs.
+### You can take reference of structure but not the code because the code I think it's not quite good.
 
 ## Project setup
 ```

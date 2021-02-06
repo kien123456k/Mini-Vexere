@@ -42,7 +42,6 @@ const actions = {
       );
       await commit(types.M_STATION_SUCCESS, response);
     } catch (error) {
-      console.log(error);
       commit(types.M_STATION_FAILED, {errorMessage: types.ERROR_TEXT});
     }
   },
@@ -52,7 +51,6 @@ const actions = {
       const response = await get(`/api/${VERSION}/stations`);
       await commit(types.M_STATION_SUCCESS, response);
     } catch (error) {
-      console.log(error);
       await commit(types.M_STATION_FAILED, {errorMessage: types.ERROR_TEXT});
     }
   },
@@ -103,29 +101,6 @@ const actions = {
       }
     }
   }
-  // fetchDeleteStation({commit, dispatch}, id) {
-  // api
-  //   .delete(`/api/stations/${id}`)
-  //   .then(() => {
-  //     dispatch(types.A_FETCH_LIST_STATION);
-  //   })
-  //   .catch((err) => {
-  //     commit(types.M_STATION_FAILED, err);
-  //   });
-  // },
-  // fetchUpdateStation({commit}, formStation) {
-  //   commit(types.M_STATION_REQUEST);
-  // api
-  //   .put(`api/stations/${formStation.id}`, formStation)
-  //   .then((result) => {
-  //     commit(types.M_STATION_SUCCESS, result.data);
-  //     console.log('Kien');
-  //     router.push('/admin/stations');
-  //   })
-  //   .catch((err) => {
-  //     commit(types.M_STATION_FAILED, err);
-  //   });
-  // }
 };
 
 export default {

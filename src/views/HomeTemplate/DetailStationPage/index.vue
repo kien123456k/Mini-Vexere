@@ -8,7 +8,11 @@
       <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 mt-4 mb-5">
         <div class="card profile-card shadow">
           <div class="card-img-block shadow mb-5">
-            <img class="card-img-top" :src="stationImage" alt="station image" />
+            <img
+              class="card-img-top"
+              src="../../../assets/images/StationDefault.png"
+              alt="station image"
+            />
           </div>
           <div class="card-body pt-0">
             <h5 class="card-title text-center">{{ station.name }}</h5>
@@ -45,9 +49,6 @@ export default {
     },
     station() {
       return this.$store.state.station.stations;
-    },
-    stationImage() {
-      return this.station.imageUrl ? this.station.imageUrl : '/img/StationDefault.64cb6702.png';
     }
   }
 };

@@ -98,7 +98,11 @@ export default {
         province: this.province,
         description: this.description
       });
-      if (!this.errorMessage) {
+      if (typeof this.errorMessage !== 'object') {
+        this.name = '';
+        this.address = '';
+        this.province = '';
+        this.description = '';
         $('#modalAdd').modal('hide');
       }
       this.$emit('actionActivate');

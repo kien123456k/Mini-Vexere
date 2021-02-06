@@ -4,5 +4,5 @@ module.exports = {
   devServer: {
     port: config.PORT
   },
-  publicPath: process.env.NODE_ENV === 'production' ? '/mini-vexere/' : '/'
+  publicPath: '/mini-vexere'
 };

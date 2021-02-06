@@ -2,12 +2,14 @@
   <div class="container">
     <loader-spinner v-if="loading" />
     <div class="row error-wrapper" v-else-if="!stations">
-      <p class="text-center">Opps, đã có lỗi xảy ra! Vui lòng thử lại sau!</p>
+      <p class="text-center">Opps, Something went wrong, please come back later!</p>
     </div>
     <div class="row" v-else>
       <template v-if="stations.length === 0">
-        <p class="text-center">Sorry, there is no station available at this moment!</p>
-        <p class="text-center">Please come back later!</p>
+        <div class="row error-wrapper">
+          <p class="text-center">Sorry, there is no station available at this moment!</p>
+          <p class="text-center">Please come back later!</p>
+        </div>
       </template>
       <StationItem v-else v-for="station in stations" :key="station._id" :station="station" />
     </div>
