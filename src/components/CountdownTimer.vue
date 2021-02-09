@@ -7,11 +7,16 @@ export default {
   props: {
     minute: Number
   },
+  data() {
+    return {
+      interval: null
+    };
+  },
   mounted: function () {
     this.$nextTick(function () {
       var countDownDate = new Date(Date.now() + 60000 * this.minute);
 
-      var x = setInterval(() => {
+      this.interval = setInterval(() => {
         var now = new Date().getTime();
         var distance = countDownDate - now;
 
@@ -23,11 +28,14 @@ export default {
         else document.getElementById('clock').innerHTML = '0' + minutes + ':' + '0' + seconds;
 
         if (distance < 0) {
-          clearInterval(x);
+          clearInterval(this.interval);
           this.$emit('allowResendOTP');
         }
       }, 1000);
     });
+  },
+  beforeUnmount() {
+    clearInterval(this.interval);
   }
 };
 </script>

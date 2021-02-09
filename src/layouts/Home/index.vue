@@ -6,10 +6,16 @@
 <script>
 import HomeNavbar from '../../components/Home';
 export default {
+  title: 'Mini Vexere',
   components: {
     HomeNavbar
   }
 };
 </script>
 
-<style></style>
+<style>
+body {
+  background-color: #ecf0f1;
+  background-image: none;
+}
+</style>

@@ -8,7 +8,9 @@ const authenticate = (router) => {
         try {
           const user = await decodeToken(getItem('token'));
           if (user.type === '1') {
-            if (to.path === '/admin') next({path: '/admin/welcome'});
+            if (to.path === '/admin') {
+              next({path: '/admin/welcome'});
+            }
             next();
           }
         } catch {

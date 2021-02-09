@@ -52,8 +52,8 @@ const mutations = {
       state.otpErrorMessage = types.ERROR_TEXT.wrongOTP;
       state.wrongTimes++;
     }
-    if (payload.otpErrorMessage) {
-      state.otpErrorMessage = payload.otpErrorMessage;
+    if (payload.phoneErrorMessage) {
+      state.phoneErrorMessage = payload.phoneErrorMessage;
     }
     if (payload.errorMessage) {
       state.errorMessage = payload.errorMessage;
@@ -187,7 +187,7 @@ const actions = {
   async [types.A_LOGOUT]({commit}) {
     await commit(types.M_AUTH_CLEAR);
     removeItem('token');
-    window.location.reload(false);
+    window.location.reload(true);
   }
 };
 

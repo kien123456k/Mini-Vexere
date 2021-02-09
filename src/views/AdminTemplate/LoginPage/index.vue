@@ -1,12 +1,14 @@
 <template>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-        <div class="card card-signin">
-          <div class="card-body">
-            <h5 class="card-title text-center">Đăng nhập</h5>
-            <login-form />
-            <login-verifier />
+  <div class="login-page-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+          <div class="card card-signin">
+            <div class="card-body">
+              <h5 class="card-title text-center">Đăng nhập</h5>
+              <login-form />
+              <login-verifier />
+            </div>
           </div>
         </div>
       </div>
@@ -18,6 +20,7 @@
 import LoginForm from './LoginForm';
 import LoginVerifier from './LoginVerifier';
 export default {
+  title: 'Admin Login',
   components: {
     LoginForm,
     LoginVerifier
@@ -30,13 +33,14 @@ export default {
 };
 </script>
 
-<style>
-body {
+<style scoped>
+.login-page-wrapper {
+  width: 100vw;
+  height: 100vh;
   background-color: none;
   background-image: linear-gradient(to right, #38ef7d, #11998e);
 }
-</style>
-<style scoped>
+
 .card-signin {
   border: 0;
   border-radius: 1rem;
