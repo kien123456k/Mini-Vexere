@@ -1,7 +1,7 @@
 {
   "name": "vue-routing",
   "version": "0.1.0",
-  "homepage": "https://kien123456k.github.io/mini-vexere/",
+  "homepage": "https://kien123456k.github.io/mini-vexere-Frontend/",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
