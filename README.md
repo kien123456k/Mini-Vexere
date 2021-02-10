@@ -1,4 +1,4 @@
-# ![alt text]([./dist/img/logo.60f06d83.svg](https://raw.githubusercontent.com/kien123456k/mini-vexere-Frontend/e320a483c54ed5f74a52cb4357aaa175e720555e/src/assets/images/logo.svg)) - Mini project
+# ![alt text](https://raw.githubusercontent.com/kien123456k/mini-vexere-Frontend/e320a483c54ed5f74a52cb4357aaa175e720555e/src/assets/images/logo.svg) - Mini project
 
 ## Introdution
 ### This is a mini website that I built to have fun with Vuejs.
