@@ -4,5 +4,5 @@ module.exports = {
   devServer: {
     port: config.PORT
   },
-  publicPath: '/mini-vexere-Frontend'
+  publicPath: '/mini-vexere-frontend'
 };
